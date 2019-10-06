@@ -1,6 +1,7 @@
 Flask == 0.11.1
 gevent
 gunicorn
+tensorflow
 keras
 numpy
 h5py
