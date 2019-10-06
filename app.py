@@ -19,14 +19,15 @@ import numpy as np
 
 app= Flask(__name__)
 
-model_path= 'model/model_resnet.h5'
-
-#model= load_model(model_path)
-#model._make_predict_function()
 
 from keras.applications.resnet50 import ResNet50
 model= ResNet50(weights='imagenet')
 model.save('model/model_resnet.h5')
+
+model_path= 'model/model_resnet.h5'
+
+model= load_model(model_path)
+model._make_predict_function()
 
 def model_predict(img_path, model):
     img= image.load_img(img_path, target_size=(224, 224))
