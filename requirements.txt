@@ -9,4 +9,3 @@ Werkzeug
 gevent
 requests
 globe
-os
